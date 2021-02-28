@@ -6,8 +6,7 @@
 .container {
 	width: 100%;
 	height: 100vh;
-	/* background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0,.7)), url(https://wallpaperboat.com/wp-content/uploads/2019/11/ocean-sunset-23.jpg) center no-repeat; */
-	background-color: #ccc;
+	background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0,.7)), url(https://wallpaperboat.com/wp-content/uploads/2019/11/ocean-sunset-23.jpg) center no-repeat;
 	background-size: cover;
 }
 
@@ -22,7 +21,6 @@
 	flex-direction: column;
 	/* justify-content: center; */
 	align-items: center;
-	display: none;
 }
 
 .banner-heading {
@@ -80,6 +78,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow:0 20px 50px rgba(0,0,0, .4);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s;
 }
 
 .sign-up-form {
@@ -165,4 +166,141 @@ border-bottom-color: #cc683c;
 .sign-up-form button {
 	display: block;
 	margin-top: 80px;
+	width: 150px;
+	padding: 8px 5px;
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	outline: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
 }
+
+.header	{
+	width: 50%;
+	background:linear-gradient(to top, rgba(0,0,0, .4), rgba(0,0,0, .2)), url(https://cdn.wallpapersafari.com/78/6/C0NKFG.jpg) center no-repeat;
+	background-size: cover;
+	box-shadow: -10px 0 30px rgba(0, 0, 0, .3);
+	position: relative;
+}
+
+.header h1 {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.x-btn {
+	position: absolute;
+	bottom: -6%;
+	right: 1%;
+	font-size: 23px;
+	color: #262626;
+	cursor: pointer;
+}
+
+@media(max-width: 850px) {
+	.form-container {
+		width: 90%;
+		height: 90vh;
+	}
+
+	.sigh-up-form {
+		padding: 50px 30px;
+	}
+
+	.form-input {
+		width: 200px;
+		font-size: 14px;
+		margin-bottom: 30px;
+		padding: 7px ;
+	}
+
+	.sign-up-form p {
+		font-size: 15px;
+	}
+
+	.sign-up-form label {
+		font-size: 13px;
+	}
+
+	.sign-up-form input[type="checkbox"] {
+		width: 25px;
+		height: 12px;
+	}
+	
+	.sign-up-form input[type="checkbox"]::before {
+		width: 14px;
+		height: 14px;
+	}
+
+	.sign-up-form button {
+		margin-top: 50px;
+		width: 120px;
+		padding: 6px 4px;
+		font-size: 13px;
+		border-width: 1px;
+	}
+
+	.header h1 {
+		font-size: 30px;
+	}
+}
+
+@media(max-width: 800px) {
+	.banner {
+		/* width: 450px; */
+		width: 90%;
+	}
+
+	.banner-heading {
+		font-size: 10vw;
+		margin-bottom: 40px;
+		border-width: 4px;
+	}
+
+	.arrow {
+		font-size: 30px;
+	}
+
+	.banner-btn {
+		width: 150px;
+		padding: 10px;
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 650px) {
+	.header {
+		display: none;
+	}
+
+	.form-container {
+		width: 300px;
+	}
+
+	.sign-up-form {
+		width: 100%;
+	}
+}
+
+/* @media(max-width: 500px) {
+	.banner {
+		width: 300px;
+	}
+	
+	.banner-heading {
+		font-size: 40px;
+	}
+} */
